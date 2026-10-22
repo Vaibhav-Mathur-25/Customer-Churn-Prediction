@@ -13,7 +13,7 @@ st.set_page_config(page_title="Customer Churn Predictor", page_icon="📉", layo
 # ---------------------------------------------------------------------------
 @st.cache_resource
 def load_and_train():
-    df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
     # TotalCharges cleanup: blanks -> 0 (all correspond to tenure=0, new customers)
     df["TotalCharges"] = df["TotalCharges"].replace(" ", np.nan)
